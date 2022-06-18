@@ -1,8 +1,9 @@
 import * as React from "react";
+import img from "../../IMG/LogoFS.png"
 function Header() {
     return(
         <div>
-            <h1>First Step</h1>
+            <img src={img} height="200px" width="auto" alt="logo.png"/>
         </div>
     )
 }
