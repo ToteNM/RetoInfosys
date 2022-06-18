@@ -1,18 +1,19 @@
 import * as React from "react";
-import img from "../IMG/LogoFS.png"
-function Header() {
+import "./style/style.css"
+
+function Navbar() {
     return(
         <div className="navbar">
             <div className="sub-nav">
-                <div>
+                <div className="nav-item">
                     Encuesta
                 </div>
             </div>
             <div className="sub-nav">
-                <div>
+                <div className="nav-item">
                     ¿Necesitas ayuda?
                 </div>
-                <div>
+                <div className="nav-item">
                     Violentómetro
                 </div>
             </div>
@@ -20,4 +21,4 @@ function Header() {
     )
 }
 
-export default Header;
+export default Navbar;
