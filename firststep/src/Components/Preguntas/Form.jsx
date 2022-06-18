@@ -62,6 +62,7 @@ class Form extends React.Component {
       this._next()
     }
 
+
     handleEnd = event => {
       localStorage.setItem('answers', this.state.answers);
     }

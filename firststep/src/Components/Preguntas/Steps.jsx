@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Step from './Step'
+import { Navigate } from "react-router-dom";
 
 function Steps(props) {
     console.log(props.answers)
@@ -280,15 +281,18 @@ function Steps(props) {
         )
     } else if (props.currentStep === 23) {
         return(
-            <Step 
-                number="twentythree" 
-                question="¿Has sentido miedo por tu vida?" 
-                value={props.answers.twentythree} 
-                handleChange={props.handleChange} 
-                handleNext={props.handleNext}
-                num={props.currentStep}
-                handleEnd={props.handleEnd}
-            />
+            <div>
+                <Step 
+                    number="twentythree" 
+                    question="¿Has sentido miedo por tu vida?" 
+                    value={props.answers.twentythree} 
+                    handleChange={props.handleChange} 
+                    handleNext={props.handleNext}
+                    num={props.currentStep}
+                    handleEnd={props.handleEnd}
+                />
+                <Navigate to="/resultados"/>
+            </div>
         )
     } 
   }
