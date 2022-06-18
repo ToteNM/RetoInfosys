@@ -1,6 +1,7 @@
 import * as React from "react";
 import './style/style.css'
 
+
 let stateMap = new Map()
     stateMap.set('cdmx', ["55-5345-5557", "Procuraduría General de Justicia de la CDMX", "https://www.fgjcdmx.gob.mx/"])
     stateMap.set('aguascalientes', ["01 (449) 910 2800", "Fiscalía General del Estado Aguascalientes", "https://www.fiscalia-aguascalientes.gob.mx/"])
@@ -49,7 +50,7 @@ function Sugerencias(props) {
             setRedRecommendation(
                 <div className="recommend">
                     <p>
-                    Para denunciar un acto de violencia grave en un organismo de tu estado. <br></br><br></br>
+                    Los resultados de la encuesta indican que estás sufriendo violencia doméstica. Recuerda que nigun tipo de violencia debe ser tolerada. Para denunciar un acto de violencia grave en un organismo de tu estado. <br></br><br></br>
                     Puedes hacerlo en la {stateData[1]}, a través de su sitio web <a href={stateData[2]}>{stateData[2]}</a>, o llamando al número telefónico {stateData[0]}
                 </p>
                 <p>
@@ -62,7 +63,7 @@ function Sugerencias(props) {
             setOrangeRecommendation(
                 <div className="recommend">
                     <p>
-                    Para denunciar un acto de violencia grave en un organismo de tu estado. <br></br><br></br>
+                    Los resultados de la encuesta indican que eres víctima de violencia dentro de categoría moderada a severa. Es importante tomar medidas ahora y recuerda que ningún tipo de violencia debe ser tolerada.  Para denunciar un acto de violencia grave en un organismo de tu estado. <br></br><br></br>
                     Puedes hacerlo en la {stateData[1]}, a través de su sitio web <a href={stateData[2]}>{stateData[2]}</a>, o llamando al número telefónico {stateData[0]}
                 </p>
                 <p>
@@ -75,12 +76,20 @@ function Sugerencias(props) {
             setGoldRecommendation(
                 <div className="recommend">
                     <p>
-                    Para denunciar un acto de violencia grave en un organismo de tu estado. <br></br><br></br>
-                    Puedes hacerlo en la {stateData[1]}, a través de su sitio web <a href={stateData[2]}>{stateData[2]}</a>, o llamando al número telefónico {stateData[0]}
+                    Los resultados de la encuesta indican que podrías estar viviendo una situación de violencia doméstica. La mayoría de estos casos de violencia doméstica suelen escalar a violencia severa. Es importante tomar medidas preventivas.
                 </p>
                 <p>
-                    Recuerda que tu denuncia es anónima y no corres riesgo alguno por realizarla. 
+                    Algunas sugerencias que puedes tomar en cuenta son:
                 </p>
+                <ul>
+                    <li>Plática con tu pareja de las acciones que te hacen sentir incómoda</li>
+                    <li>Acude con un profesional</li>
+                    <li>Ten un círculo de amigos de tu confianza</li>
+                    <li>No minimices ningún acto que te haga sentir mal o vulnerada</li>
+                </ul>
+                <p>
+                    Recuerda que puedes comunicarte al número 911 en cualquier momento si te sientes en peligro
+                </p>   
                 </div>
             )
         }
@@ -88,23 +97,40 @@ function Sugerencias(props) {
             setYellowRecommendation(
                 <div className="recommend">
                     <p>
-                    Para denunciar un acto de violencia grave en un organismo de tu estado. <br></br><br></br>
-                    Puedes hacerlo en la {stateData[1]}, a través de su sitio web <a href={stateData[2]}>{stateData[2]}</a>, o llamando al número telefónico {stateData[0]}
+                    Algunas de las respuestas proporcionadas en el cuestionario podrían indicar violencia doméstica/de género. Ninguna acción que te haga sentir incómoda o vulnerada debe ser tolerada o minimizada. 
+                   
+                    Algunas sugerencias que puedes tomar en cuenta son:
                 </p>
+                <ul>
+                    <li>Plática con tu pareja de las acciones que te hacen sentir incómoda</li>
+                    <li>Acude con un profesional</li>
+                    <li>Ten un círculo de amigos de tu confianza</li>
+                </ul>
                 <p>
-                    Recuerda que tu denuncia es anónima y no corres riesgo alguno por realizarla. 
-                </p>
+                    Recuerda que puedes comunicarte al número 911 en cualquier momento si te sientes en peligro
+                </p>   
                 </div>
+               
             )
         }
     }, [])
 
     return(
         <div className="main">
-            {redRecommendation}
-            {orangeRecommendation}
-            {goldRecommendation}
-            {yellowRecommendation}
+
+        <div className="main">
+            <div className="recommendation-flex">
+                <div className="image">
+                    <img src="https://denuncia.org/wp-content/uploads/2021/08/denuncia-en-li%CC%81nea.png" alt="denuncia"></img>
+                </div>
+                <div className="recommendation">
+                    {redRecommendation}
+                    {orangeRecommendation}
+                    {goldRecommendation}
+                    {yellowRecommendation}
+                </div>
+            </div>
+        </div>
         </div>
     )
 }
