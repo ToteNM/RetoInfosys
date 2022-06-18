@@ -5,7 +5,7 @@ function Boton(){
     return(
         <div>
             <button className="button" >
-            <span>Hover </span>
+            <span>Siguiente </span>
             </button>
         </div>
         
